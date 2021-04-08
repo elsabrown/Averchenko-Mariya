@@ -144,12 +144,13 @@ function removeFirstOccurrences(str, value) {
  *   '<a>' => 'a'
  */
 function unbracketTag(str) {
-    throw new Error('Not implemented');
+    return str.substring(1,str.length-1);;
 }
 
 
 /**
  * Converts all characters of the specified string into the upper case
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
  *
  * @param {string} str
  * @return {string}
