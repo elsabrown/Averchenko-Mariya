@@ -87,7 +87,8 @@ function getFirstChar(value) {
 
 /**
  * Removes a leading and trailing whitespace characters from string.
- *
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+ * 
  * @param {string} value
  * @return {string}
  *
@@ -112,7 +113,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
  *   'cat', 3 => 'catcatcat'
  */
 function repeatString(value, count) {
-    throw new Error('Not implemented');
+    return value.repeat(count);
 }
 
 /**
