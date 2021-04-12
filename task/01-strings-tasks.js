@@ -199,7 +199,11 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error("Not implemented");
+    const dash = '─' ;
+    const line = '│';
+    let widthRectangle = dash.repeat(width-2);
+    let heightRectangle = (line + ' '.repeat(width-2) + line +'\n').repeat(height-2);
+    return `┌${widthRectangle}┐\n${heightRectangle}└${widthRectangle}┘\n`;
 }
 
 /**
