@@ -25,7 +25,6 @@ function getRectangleArea(width, height) {
     return width * height;
 }
 
-
 /**
  * Returns a circumference of circle given by radius.
  *
@@ -38,7 +37,8 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    throw new Error('Not implemented');
+    const pi = 3.14159265358979323846;
+    return 2*pi*radius;
 }
 
 /**
