@@ -37,8 +37,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    const pi = 3.14159265358979323846;
-    return 2*pi*radius;
+     return 2 * Math.PI * radius;
 }
 
 /**
@@ -150,6 +149,7 @@ function parseNumberFromString(value) {
 
 /**
  * Returns a diagonal length of the rectangular parallelepiped given by its sides a,b,c.
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot
  *
  * @param {number} a
  * @param {number} b
