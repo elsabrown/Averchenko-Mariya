@@ -97,6 +97,7 @@ function getLinearEquationRoot(a, b) {
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi, coordinates in Cartesian plane
  * See details https://en.wikipedia.org/wiki/Euclidean_vector#Representations
+ * https://ru.onlinemschool.com/math/library/vector/angl/
  *
  * @param {number} x1
  * @param {number} y1
@@ -133,7 +134,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-    throw new Error('Not implemented');
+    return Math.round(value) % 10;
 }
 
 
