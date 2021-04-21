@@ -222,6 +222,7 @@ function roundToPowerOfTen(num, pow) {
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN
  *
  * @param {any} value
  * @param {any} def
@@ -235,7 +236,7 @@ function roundToPowerOfTen(num, pow) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    throw new Error('Not implemented');
+    return Number(value) ? value : def;
 }
 
 module.exports = {
