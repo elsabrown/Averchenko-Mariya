@@ -222,7 +222,8 @@ function roundToPowerOfTen(num, pow) {
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.
- * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
  *
  * @param {any} value
  * @param {any} def
