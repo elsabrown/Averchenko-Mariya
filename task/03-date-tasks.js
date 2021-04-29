@@ -69,6 +69,9 @@ function isLeapYear(date) {
 /**
  * Returns the string represention of the timespan between two dates.
  * The format of output string is "HH:mm:ss.sss"
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substring
  *
  * @param {date} startDate
  * @param {date} endDate
@@ -82,7 +85,26 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-   throw new Error('Not implemented');
+//    let diff = new Date (endDate - startDate);
+
+//    let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//    diff -=  days * (1000 * 60 * 60 * 24);
+   
+//    let hours = Math.floor(diff / (1000 * 60 * 60));
+//    diff -= hours * (1000 * 60 * 60);
+   
+//    let min = Math.floor(diff / (1000 * 60));
+//    diff -= min * (1000 * 60);
+   
+//    let seconds = Math.floor(diff / 1000);
+//    diff -= seconds * 1000;
+
+//    let milisecond = Math.floor(diff / 1000)
+//    diff -= milisecond * 1000;
+   
+//   return (`${hours}:${min}:${seconds}.${milisecond}`);
+
+   return new Date(endDate - startDate).toISOString().substring(11, 23);
 }
 
 
