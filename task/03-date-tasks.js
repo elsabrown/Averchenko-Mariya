@@ -99,10 +99,10 @@ function timeSpanToString(startDate, endDate) {
 //    let seconds = Math.floor(diff / 1000);
 //    diff -= seconds * 1000;
 
-//    let milisecond = Math.floor(diff / 1000)
+//    let millisecond = Math.floor(diff / 1000)
 //    diff -= milisecond * 1000;
    
-//   return (`${hours}:${min}:${seconds}.${milisecond}`);
+//   return (`${hours}:${min}:${seconds}.${millisecond}`);
 
    return new Date(endDate - startDate).toISOString().substring(11, 23);
 }
@@ -122,7 +122,18 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    throw new Error('Not implemented');
+    let hours = date.getUTCHours();
+    if (hours > 12) {
+       hours = hours - 12;
+    };
+    let minutes = date.getUTCMinutes();
+    let hoursAngle = 0.5 * (hours * 60 + minutes); 
+    let minutesAngle = minutes * 6; // исходя из того, что 1 минута = 6 градусам
+    let angle = Math.abs(hoursAngle - minutesAngle);
+    if (angle > 180) {
+       angle = 360 - angle;
+    };
+    return (Math.PI * angle) / 180;
 }
 
 
